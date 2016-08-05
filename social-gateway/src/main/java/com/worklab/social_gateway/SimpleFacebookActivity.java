@@ -1,4 +1,4 @@
-package com.worklab.simplesocialgateway;
+package com.worklab.social_gateway;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

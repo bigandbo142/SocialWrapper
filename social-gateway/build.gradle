@@ -1,11 +1,20 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+
+ext {
+    PUBLISH_GROUP_ID = 'com.worklab.social_gateway'
+    PUBLISH_ARTIFACT_ID = 'simple-social'
+    PUBLISH_VERSION = '0.0.1'
+}
 
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.0"
 
     defaultConfig {
-        applicationId "com.worklab.simplesocialgateway"
         minSdkVersion 15
         targetSdkVersion 24
         versionCode 1
@@ -17,14 +26,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
     lintOptions {
         abortOnError false
     }
 }
 
 dependencies {
+    compile 'com.android.support:appcompat-v7:24.+'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.1.1'
-    compile project (':social-gateway')
+    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
 }
+
+apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
