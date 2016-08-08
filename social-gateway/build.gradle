@@ -7,7 +7,7 @@ properties.load(project.rootProject.file('local.properties').newDataInputStream(
 ext {
     PUBLISH_GROUP_ID = 'com.worklab.social_gateway'
     PUBLISH_ARTIFACT_ID = 'simple-social'
-    PUBLISH_VERSION = '0.0.1'
+    PUBLISH_VERSION = '0.0.2'
 }
 
 android {
