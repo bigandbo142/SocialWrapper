@@ -12,4 +12,5 @@ public interface IAuthentication {
     @SuppressWarnings("unused") void doLogout();
     @SuppressWarnings("unused") boolean isLogged();
     @SuppressWarnings("unused") List<String> getCurrentPermissions();
+    @SuppressWarnings("unused") void registerFacebookListener(FacebookManagerCallback pListener);
 }

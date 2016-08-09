@@ -19,5 +19,6 @@ public class Permissions {
         public final static String USER_TAGGED_PLACES = "user_tagged_places";
         public final static String USER_VIDEOS = "user_videos";
         public final static String USER_WORK_HISTORY = "user_work_history";
+        public final static int IMAGE_SIZE_LIMIT = 12582912;
     }
 }
